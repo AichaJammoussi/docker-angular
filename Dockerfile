@@ -20,7 +20,7 @@ FROM nginx:alpine
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Copier le build Angular
-COPY --from=build /app/dist/aston-villa-app /usr/share/nginx/html
+COPY --from=build /usr/src/app/dist/aston-villa-app /usr/share/nginx/html
 
 EXPOSE 80
 
